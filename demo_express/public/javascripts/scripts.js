@@ -18,7 +18,6 @@ $(document).ready(() => {
 		};
 
 		$.post("http://localhost:3000/users/login", data, function() {})
-			.done(function(res) {})
 			.done(function(res) {
 				$("#inputEmail").val("");
 				$("#inputPassword").val("");

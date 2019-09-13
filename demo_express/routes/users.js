@@ -17,11 +17,10 @@ router.post('/login', function(request, response) {
   var email = request.body.email;
   var password = request.body.password;
   if (authorization.auth.authorize(email, password)){
-    response.statusCode = 200;
+    response.redirect(200, "/leagues");
   } else {
-    response.statusCode = 403;
+    response.redirect(403, "/error");
   }
-  response.end();
 });
 
 router.post('/register', function(request, response) {
@@ -30,6 +29,7 @@ router.post('/register', function(request, response) {
     var password = request.body.password;
     if (authorization.auth.authorize(email, password)){
       response.statusCode = 200;
+
     } else {
       response.statusCode = 403;
     }
