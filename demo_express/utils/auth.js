@@ -2,9 +2,11 @@ const fs = require("fs");
 // Note: email and password values hard-coded for demo only!
 
 var auth = {
-	users: [getUsers],
 	authorize: function(email, password) {
-		var validUser = this.users.filter(user => {
+		console.log(email, password);
+		var users = getUsers();
+		console.log(users);
+		var validUser = users.filter(user => {
 			return user.email === email && user.password === password;
 		});
 
@@ -12,13 +14,15 @@ var auth = {
 			return true;
 		}
 		return false;
-	},
+	}
 };
 
 var getUsers = () => {
 	try {
-    var usersString = fs.readFileSync("/data/users.json");
-    var users = JSON.parse(usersString);
+		console.log("before");
+		var usersString = fs.readFileSync("./data/users.json");
+		console.log("after");
+		var users = JSON.parse(usersString);
 		return users;
 	} catch (err) {
 		return [];

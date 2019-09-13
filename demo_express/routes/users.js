@@ -17,10 +17,11 @@ router.post('/login', function(request, response) {
   var email = request.body.email;
   var password = request.body.password;
   if (authorization.auth.authorize(email, password)){
-    response.redirect(200, "/leagues");
+    response.statusCode = 200;
   } else {
-    response.redirect(403, "/error");
+    response.statusCode = 403;
   }
+  response.end();
 });
 
 router.post('/register', function(request, response) {
