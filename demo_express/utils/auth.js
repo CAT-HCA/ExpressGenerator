@@ -19,8 +19,7 @@ var getUsers = () => {
 	try {
     var usersString = fs.readFileSync("/data/users.json");
     var users = JSON.parse(usersString);
-		var filteredUsers = users.filter(user => user.email === email);
-		return filteredUsers[0];
+		return users;
 	} catch (err) {
 		return [];
 	}
