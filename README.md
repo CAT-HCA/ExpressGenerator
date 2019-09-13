@@ -1,3 +1,6 @@
+![enter image description here](https://lh3.googleusercontent.com/GwfTTRqhQ3c0u26XXiCTur3bDSdYslczDTaSTBdf4hr6bD1p8iM8W1zqqAvoiebBu-GM1OOJJTA)
+
+
 # Express Generator
 
 In this Section we'll user Express Generator to generate an Express App.
@@ -52,8 +55,5 @@ $ npm start
 
 Load [http://localhost:3000/](http://localhost:3000/) in your browser
 
-![Express](img/express.png?raw=true "Express")
 
-## Useful link(s)
 
--   [Express Generator](https://expressjs.com/en/starter/generator.html)
